@@ -36,6 +36,4 @@ const mainContainer = document.getElementById("root")
 
 customRender(reactElement, mainContainer)
 
-//testing vscode commits
-
 
