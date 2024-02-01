@@ -24,11 +24,15 @@ const anotherElement = (
   <a href="https://google.com" target='_blank'>Visit google</a>
 )
 
+// Lets see if evaluated expressions, injecting variables is possible here or not.
+const anotherUser = "Angular"
+
 // Lets see what type is expected
 const reactElement = React.createElement(
   'a',
   {href : "https://google.com", target: '_blank'},
-  'click me'
+  'click me',
+  anotherUser // this works.
   )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -38,7 +42,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     // <ReactElement/> // This doesn't work because its expecting some other type 
     // ReactElement  // Specifying just this also won't work
     // anotherElement // This works because conversion to object is happening behind the scenes. In case of ReactElement, it doesn't have proper type that render is expecting.
-    // reactElement // this works because it is in accordance with parameters requirements.
+    reactElement // this works because it is in accordance with parameters requirements.
 
-    <App />    
+    // <App />    
 )
