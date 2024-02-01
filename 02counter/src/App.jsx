@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   //Why hooks? Don't need to take multiple references in JS to update innerHTMLs at various places.
-  
+
   let [counter, setCounter] = useState(0)
 
   // let counter = 15
@@ -15,7 +15,12 @@ function App() {
   }
 
   const removeValue = () =>{
-    setCounter(counter - 1)
+    if((counter-1) > 0){
+      counter = counter - 1
+    } else {
+      counter = 0
+    }
+    setCounter(counter)
   }
 
   return (
