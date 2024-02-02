@@ -27,3 +27,12 @@ Here is the takeaway from the video:
 8. Reconciliation is the algo behind what popularly known as the Virtual-DOM.
 
 9. In UI it is not necessary for every update to be applied immediately. */
+
+<br/>
+Why list need keys now?  
+<br/>
+Although Fiber is a ground-up rewrite of the reconciler, the high-level algorithm described in the React docs will be largely the same. The key points are:
+
+-  Different component types are assumed to generate substantially different trees. React will not attempt to diff them, but rather replace the old tree completely.
+
+-  Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
