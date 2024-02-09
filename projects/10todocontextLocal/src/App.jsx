@@ -39,7 +39,7 @@ export default function App() {
     }
   }, [])
   
-  // Yes, we can use multiple todos. We need to add to localStorage upon a change in todos, But we don't want to get everything again, hence, another useEffect().
+  // Yes, we can use multiple useEffect. We need to add to localStorage upon a change in todos, But we don't want to get everything again, hence, another useEffect().
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos))
   }, [todos])
